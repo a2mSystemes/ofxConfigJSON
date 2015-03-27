@@ -1,0 +1,8 @@
+
+{
+   "isServer" : false,
+   "broadcastAddress" : "auto",
+   "networkUsage" : true,
+   "networkClients" : "auto",
+   "serverAddress" : "auto"
+}

@@ -1,5 +1,11 @@
 {
-    "test": 1,
-    "lastName": "Smith",
-    "float": 25.0000
+   "ID" : "101",
+   "playerName" : "rightLeft",
+   "synchronised" : true,
+   "includeConfigDirs" : [],
+   "includeConfFiles" : [
+      "quads.conf.json",
+      "network.conf.json"
+   ],
+
 }

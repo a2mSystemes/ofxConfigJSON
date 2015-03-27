@@ -1,0 +1,43 @@
+{
+   "quads" : [
+      {
+         "corners" : [
+            "0",
+            "0",
+            "0",
+            1920,
+            1080,
+            1920,
+            1080,
+            "0"
+         ],
+         "multY" : 1,
+         "media" : "test.plst",
+         "KeepAspect" : true,
+         "multX" : 1,
+         "selected" : false,
+         "maskAlpha" : 1,
+         "type" : "omxPlaylist"
+      },
+      {
+         "multX" : 1,
+         "media" : "./slideshow1/",
+         "KeepAspect" : true,
+         "multY" : 1,
+         "corners" : [
+            "0",
+            "0",
+            "0",
+            1920,
+            1080,
+            1920,
+            1080,
+            "0"
+         ],
+         "type" : "slides",
+         "duration" : "01:00:15ff",
+         "maskAlpha" : 1,
+         "selected" : true
+      }
+   ]
+}
