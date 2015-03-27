@@ -6,10 +6,10 @@
 		<Option makefile_is_custom="1" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="addons/;src/;build config/;addons/ofxConfigJSON/;" />
+		<Option virtualFolders="addons/;src/;build config/;addons/ofxConfigJSON/;data/;" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/$(PROJECT_NAME)" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/$(PROJECT_NAME)_debug" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="bin" />
 				<Option object_output="obj/Debug/" />
 				<Option external_deps="../../../libs/openFrameworksCompiled/lib/linux64/libopenFrameworksDebug.a;" />
@@ -33,8 +33,20 @@
 		<Unit filename="../../src/ofxConfigJSON.h">
 			<Option virtualFolder="addons/ofxConfigJSON/" />
 		</Unit>
+		<Unit filename="Makefile">
+			<Option virtualFolder="build config/" />
+		</Unit>
 		<Unit filename="addons.make">
 			<Option virtualFolder="build config/" />
+		</Unit>
+		<Unit filename="bin/data/config.json">
+			<Option virtualFolder="data/" />
+		</Unit>
+		<Unit filename="bin/data/network.conf.json">
+			<Option virtualFolder="data/" />
+		</Unit>
+		<Unit filename="bin/data/quads.conf.json">
+			<Option virtualFolder="data/" />
 		</Unit>
 		<Unit filename="config.make">
 			<Option virtualFolder="build config" />

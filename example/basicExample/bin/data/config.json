@@ -6,6 +6,5 @@
    "includeConfFiles" : [
       "quads.conf.json",
       "network.conf.json"
-   ],
-
+   ]
 }
