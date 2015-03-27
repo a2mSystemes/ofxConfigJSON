@@ -1,3 +1,4 @@
 example/basicExample/obj/*
 example/basicExample/bin/*.debug.bin
 example/basicExample/bin/*.bin
+*~
