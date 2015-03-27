@@ -24,3 +24,57 @@
 #include "ofxConfigJSON.h"
 
 
+ofxConfigJSON::ofxConfigJSON()
+{
+
+}
+
+ofxConfigJSON::~ofxConfigJSON()
+{
+
+}
+
+void ofxConfigJSON::setup(string file)
+{
+    loadFile(file);
+}
+
+bool ofxConfigJSON::loadFile(string file)
+{
+    return _conf.open(file);
+}
+
+bool ofxConfigJSON::saveFile()
+{
+
+}
+
+bool ofxConfigJSON::saveFile(string file)
+{
+
+}
+
+bool ofxConfigJSON::addConfElement(string key, int value)
+{
+
+}
+
+bool ofxConfigJSON::addConfElement(string key, float value)
+{
+
+}
+
+bool ofxConfigJSON::addConfElement(string key, bool value)
+{
+
+}
+
+bool ofxConfigJSON::addConfElement(string key, string value)
+{
+
+}
+
+string ofxConfigJSON::dump()
+{
+    return _conf.getRawString();
+}

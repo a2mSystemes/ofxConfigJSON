@@ -24,14 +24,42 @@
 #ifndef OFXCONFIGJSON_H
 #define OFXCONFIGJSON_H
 
+#include "ofxJSON.h"
+
+using namespace std;
 
 class ofxConfigJSON
 {
     public:
+
         ofxConfigJSON();
         virtual ~ofxConfigJSON();
+
+        void setup(){};
+        void setup(string file);
+
+
+
+        bool loadFile(string file);
+        bool saveFile();
+        bool saveFile(string file);
+
+        bool addConfElement(string key, int value);
+        bool addConfElement(string key, float value);
+        bool addConfElement(string key, bool value);
+        bool addConfElement(string key, string value);
+
+//        bool addConfElement(string key, int value);
+//        bool addConfElement(string key, float value);
+//        bool addConfElement(string key, bool value);
+//        bool addConfElement(string key, string value);
+
+        string dump();
+
     protected:
     private:
+        bool fileSaved;
+        ofxJSONElement _conf;
 };
 
 #endif // OFXCONFIGJSON_H
