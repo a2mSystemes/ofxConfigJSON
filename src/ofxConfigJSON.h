@@ -49,6 +49,8 @@ class ofxConfigJSON
         bool addConfElement(string key, bool value);
         bool addConfElement(string key, string value);
 
+        bool addConfElementArray(string key, int values[]);
+
 //        bool addConfElement(string key, int value);
 //        bool addConfElement(string key, float value);
 //        bool addConfElement(string key, bool value);

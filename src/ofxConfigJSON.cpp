@@ -22,7 +22,7 @@
 //
 // *******************************************************************************
 #include "ofxConfigJSON.h"
-
+#include "ofMain.h"
 
 ofxConfigJSON::ofxConfigJSON()
 {
@@ -46,12 +46,12 @@ bool ofxConfigJSON::loadFile(string file)
 
 bool ofxConfigJSON::saveFile()
 {
-
+    return saveFile("tmp.json");
 }
 
 bool ofxConfigJSON::saveFile(string file)
 {
-
+    return _conf.save(file, true);
 }
 
 bool ofxConfigJSON::addConfElement(string key, int value)
@@ -61,17 +61,40 @@ bool ofxConfigJSON::addConfElement(string key, int value)
 
 bool ofxConfigJSON::addConfElement(string key, float value)
 {
-
+        _conf[key] = value;
+    if (_conf[key] == value)
+        return true;
+    return false;
 }
 
 bool ofxConfigJSON::addConfElement(string key, bool value)
 {
-
+    _conf[key] = value;
+    if (_conf[key] == value)
+        return true;
+    return false;
 }
 
 bool ofxConfigJSON::addConfElement(string key, string value)
 {
+    _conf[key] = value;
+    if (_conf[key] == value)
+        return true;
+    return false;
+}
 
+bool ofxConfigJSON::addConfElementArray(string key, int* values)
+{
+    if (values == NULL) return false;
+    Json::Value vec(Json::arrayValue);
+    int length = sizeof(int) / sizeof(int);
+    ofLogWarning("ofxConfigJSON::addConfElementArray") << "ok. data length : " + ofToString(length);
+
+    for(int i = 0; i <= length; i++){
+        vec.append(Json::Value(values[i]));
+    }
+    _conf[key] = vec;
+    return true;
 }
 
 string ofxConfigJSON::dump()
