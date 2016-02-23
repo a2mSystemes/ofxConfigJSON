@@ -32,10 +32,10 @@ class ofxConfigJSON
 {
     public:
 
-        ofxConfigJSON();
+        ofxConfigJSON(): fileSaved(false){};
         virtual ~ofxConfigJSON();
 
-        void setup(){};
+        void setup();
         void setup(string file);
 
 

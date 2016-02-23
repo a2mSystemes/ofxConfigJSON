@@ -24,10 +24,7 @@
 #include "ofxConfigJSON.h"
 #include "ofMain.h"
 
-ofxConfigJSON::ofxConfigJSON()
-{
 
-}
 
 ofxConfigJSON::~ofxConfigJSON()
 {
